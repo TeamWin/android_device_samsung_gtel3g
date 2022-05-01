@@ -1,2 +1,8 @@
 [
+  {
+	"remote": "github",
+	"repository": "LineageOS/android_external_nano",
+	"target_path": "external/nano",
+	"branch": "cm-14.1"
+  }
 ]
