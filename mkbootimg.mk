@@ -25,7 +25,7 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(INSTALLED_DTIMAGE_TARGET) \
                 $(recovery_ramdisk) \
 		$(recovery_kernel)
 	@echo -e ${CL_CYN}"----- Making recovery image ------"${CL_RST}
-        $(hide) gunzip -f < $(recovery_ramdisk) | $(LZMA_BIN) > $(LZMA_RAMDISK)
+	$(hide) gunzip -f < $(recovery_ramdisk) | $(LZMA_BIN) > $(LZMA_RAMDISK)
 	$(hide) $(MKBOOTIMG) $(INTERNAL_RECOVERYIMAGE_ARGS) --dt $(INSTALLED_DTIMAGE_TARGET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET) --output $@ --ramdisk $(LZMA_RAMDISK)
 	$(hide) $(call assert-max-image-size,$@,$(BOARD_RECOVERYIMAGE_PARTITION_SIZE),raw)
 	@echo -e ${CL_CYN}"Made recovery image: $@"${CL_RST}
