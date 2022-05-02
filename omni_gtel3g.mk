@@ -24,11 +24,13 @@
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 # Inherit PBRP things
-$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/runtime_libart.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/runtime_libart.mk)
+
 $(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
 PRODUCT_PACKAGES += \
