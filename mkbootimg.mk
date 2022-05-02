@@ -3,8 +3,8 @@ LOCAL_PATH := $(call my-dir)
 ## Build and run dtbtool
 DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbToolLineage$(HOST_EXECUTABLE_SUFFIX)
 INSTALLED_DTIMAGE_TARGET := $(LOCAL_PATH)/prebuilt/dt.img
-LZMA_BIN​ := ​$(​shell​ which lzma)
-​LZMA_RAMDISK​ := ​$(​PRODUCT_OUT​)​/ramdisk-recovery-lzma.img
+​LZMA_BIN := $(shell which lzma)
+LZMA_RAMDISK := $(PRODUCT_OUT)/ramdisk-recovery-lzma.img
 
 #$(INSTALLED_DTIMAGE_TARGET): $(DTBTOOL) $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr $(INSTALLED_KERNEL_TARGET)
 #	$(call pretty,"Target dt image: $(INSTALLED_DTIMAGE_TARGET)")
