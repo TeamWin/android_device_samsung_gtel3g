@@ -1,3 +1,3 @@
-TWRP device tree for Samsung SM-T560/61
+PBRP device tree for Samsung SM-T560/61
 
-Use TWRP 5.1 branch for compiling
+Use PBRP 8.0 branch for compiling
